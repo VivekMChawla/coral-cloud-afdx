@@ -6,4 +6,3 @@ The agent's job is to assist users in navigating and managing bookings for diffe
 
 # Website
 http://www.coral-cloud.com
-
