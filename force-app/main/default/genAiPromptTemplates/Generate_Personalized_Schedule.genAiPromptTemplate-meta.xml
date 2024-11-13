@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersion>1</activeVersion>
+    <developerName>Generate_Personalized_Schedule</developerName>
+    <masterLabel>Generate Personalized Schedule</masterLabel>
+    <templateVersions>
+        <content>Present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For each activity, include name, time, location and duration on a single line. Do not include the date.
+Tell the guest to reach out if they&apos;d like to book any of these activities.
+List of activities happening today that match the guest&apos;s interests:
+{!$Apex:PersonalizedGuestExperiences.Prompt}
+</content>
+        <inputs>
+            <apiName>myContact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:myContact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Published</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedGuestExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:myContact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedGuestExperiences</referenceName>
+        </templateDataProviders>
+        <versionNumber>1</versionNumber>
+    </templateVersions>
+    <templateVersions>
+        <content>Present the list of resort activities happening today that match the guest&apos;s interests.
+For clarity, use a bullet list.
+For each activity, include name, time, location and duration on a single line. Do not include the date.
+Tell the guest to reach out if they&apos;d like to book any of these activities.
+List of activities happening today that match the guest&apos;s interests:
+{!$Apex:PersonalizedGuestExperiences.Prompt}
+</content>
+        <inputs>
+            <apiName>myContact</apiName>
+            <definition>SOBJECT://Contact</definition>
+            <masterLabel>Contact</masterLabel>
+            <referenceName>Input:myContact</referenceName>
+            <required>true</required>
+        </inputs>
+        <primaryModel>sfdc_ai__DefaultOpenAIGPT35Turbo</primaryModel>
+        <status>Draft</status>
+        <templateDataProviders>
+            <definition>apex://PersonalizedGuestExperiences</definition>
+            <parameters>
+                <definition>SOBJECT://Contact</definition>
+                <isRequired>true</isRequired>
+                <parameterName>myContact</parameterName>
+                <valueExpression>{!$Input:myContact}</valueExpression>
+            </parameters>
+            <referenceName>Apex:PersonalizedGuestExperiences</referenceName>
+        </templateDataProviders>
+        <versionNumber>2</versionNumber>
+    </templateVersions>
+    <type>einstein_gpt__flex</type>
+    <visibility>Global</visibility>
+</GenAiPromptTemplate>
