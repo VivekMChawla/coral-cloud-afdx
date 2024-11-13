@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_SFMC_ActivationTargets</fullName>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ConnectionType</field>
+        <operation>equals</operation>
+        <value>SFMC</value>
+    </filters>
+    <label>Marketing Cloud</label>
+</ListView>

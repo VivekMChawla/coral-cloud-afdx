@@ -1,0 +1,152 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Home",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "{\"url\":\"/sfsites/c/cms/delivery/media/MCLPH4ZEFTERBKNEGUHB7H435B3Y?lastModifiedDate=Tue Aug 27 23:31:37 GMT 2024&height=144&width=192\",\"contentKey\":\"MCLPH4ZEFTERBKNEGUHB7H435B3Y\",\"altText\":\"\",\"contentType\":\"sfdc_cms__image\",\"bgPosition\":\"center center\",\"bgSizeOrRepeat\":\"/cover\"}",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"b42b8b8d-9d89-4a21-96bf-ff67dd9e714e\",\"columns\":[{\"UUID\":\"bed64451-0a8d-47ce-82b2-9c4ffed763ae\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "350px",
+            "sectionVerticalAlign" : "center"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "richTextValue" : "<div class=\"slds-grid slds-wrap\">\n    <div class=\"slds-align_absolute-center slds-p-top_x-large slds-p-bottom_x-large\">\n            <div class=\"slds-size_2-of-3\">\n                <div class=\"slds-text-body_medium slds-text-align_center\" style=\"font-weight:bold; font-size:40px\">Welcome to Coral Cloud Resort, your ultimate tropical escape nestled in the heart of paradise.</div>\n</div>\n</div>\n    </div>\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "257d3e09-1ccc-46d0-b6c3-bf4cd6da1f62",
+              "type" : "component"
+            } ],
+            "id" : "bed64451-0a8d-47ce-82b2-9c4ffed763ae",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "b42b8b8d-9d89-4a21-96bf-ff67dd9e714e",
+          "scopedBrandingSetId" : "Coral_Cloud_Body",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"2f3184f0-ff2c-42ac-b468-1760bed56247\",\"columns\":[{\"UUID\":\"d2a0b9c7-c58a-4b33-81b3-c18b9ef0a560\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "deploymentName" : "ESA_Web_Deployment",
+                "hideChatButtonOnLoad" : "Default",
+                "scrtUrl" : "https://afdx-trailhead-02-dev-ed.develop.my.salesforce-scrt.com",
+                "siteEndpoint" : "https://afdx-trailhead-02-dev-ed.develop.my.site.com/ESWESAWebDeployment1724800920657"
+              },
+              "definition" : "experience_messaging:embeddedMessaging",
+              "id" : "7dd8151e-6e3a-4a46-b18b-f7e488345100",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "richTextValue" : "<div class=\"slds-grid slds-wrap\">\n    <div class=\"slds-align_absolute-center slds-p-top_x-large slds-p-bottom_x-large\">\n            <div class=\"slds-size_2-of-3\">\n                        <div class=\"slds-text-heading_medium slds-text-align_center\" style=\"font-weight:bold;font-size:24px\">Book an Experience of a Lifetime</div>\n        <div class=\"slds-text-body_regular slds-text-align_center\">At Coral Clouds, you'll uncover a deep connection to the land, the rich history, and the vibrant culture of our unique coastal sanctuary. Embrace the breathtaking natural beauty and the warm, welcoming community that makes this place truly special. Each day is an opportunity for new discoveries and soul-enriching experiences, inviting you to explore the rare and remarkable depths of this extraordinary coastline.\n</div>\n</div>\n    </div>\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "330ff07d-77a6-41ab-8b31-ee1eae36e989",
+              "type" : "component"
+            } ],
+            "id" : "d2a0b9c7-c58a-4b33-81b3-c18b9ef0a560",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "2f3184f0-ff2c-42ac-b468-1760bed56247",
+          "scopedBrandingSetId" : "Coral_Cloud_Heading",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "layoutDirectionDesktop" : "row",
+            "layoutDirectionMobile" : "column",
+            "layoutDirectionTablet" : "column",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"7e218b99-ee47-4238-9513-ab35679ac336\",\"columns\":[{\"UUID\":\"bdf8482a-5ec5-4bbf-bc1e-b23446a13a85\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"8\",\"seedComponents\":[]},{\"UUID\":\"ca20dce6-8cd9-46ad-aaf2-fc4076cd0280\",\"columnName\":\"Column 2\",\"columnKey\":\"6c366\",\"columnWidth\":\"4\",\"seedComponents\":[]}]}",
+            "sectionMinHeight" : "",
+            "sectionVerticalAlign" : "flex-start"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:experiencesPanel",
+              "id" : "f2ece203-8fd3-4f8e-bacb-5a9073718ec1",
+              "type" : "component"
+            } ],
+            "id" : "bdf8482a-5ec5-4bbf-bc1e-b23446a13a85",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:experienceSchedule",
+              "id" : "e8218d75-cfa1-4ffb-ac64-3b4eb6910d9d",
+              "type" : "component"
+            } ],
+            "id" : "ca20dce6-8cd9-46ad-aaf2-fc4076cd0280",
+            "name" : "6c366",
+            "title" : "Column 2",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "7e218b99-ee47-4238-9513-ab35679ac336",
+          "type" : "component"
+        } ],
+        "id" : "1921ed0e-ec24-4cd0-bfd1-e1331b13f323",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "Home",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "86c9c335-7bb6-4789-9ced-f5da9a3485d5",
+          "type" : "component"
+        } ],
+        "id" : "1cd91329-0269-4b7d-ab01-008bab1180da",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "758bc79f-7ce9-46e5-9e8c-9f128a49d0e1",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "home"
+  },
+  "urlName" : "home"
+}

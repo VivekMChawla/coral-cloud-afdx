@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Content for elevating your reps’ skills and expertise in the flow of work.</description>
+    <digitalExperienceFolderShares/>
+    <label>Enablement</label>
+    <modules>
+        <module>
+            <fullyQualifiedName>sfdc_cms__collection</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+        <module>
+            <fullyQualifiedName>sfdc_cms__exportImport</fullyQualifiedName>
+            <status>ENABLED</status>
+        </module>
+    </modules>
+</DigitalExperienceBundle>
