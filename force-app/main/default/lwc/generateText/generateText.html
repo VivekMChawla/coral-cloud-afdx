@@ -1,0 +1,51 @@
+<template>
+    <lightning-card title="Generate SVG" icon-name="custom:custom14">
+        <div class="slds-var-p-around_small">
+            <template lwc:if={error}>
+                <div class="error slds-m-bottom_medium">{error}</div>
+                <lightning-button
+                    onclick={generateResponse}
+                    label="Try again!"
+                ></lightning-button>
+            </template>
+            <template lwc:else>
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input
+                            type="color"
+                            label="Main color"
+                            value={color}
+                            onchange={handleColorChange}
+                        >
+                        </lightning-input>
+                        <lightning-input
+                            type="color"
+                            label="Secondary color"
+                            value={secColor}
+                            onchange={handleSecColorChange}
+                        >
+                        </lightning-input>
+                        <div class="slds-m-vertical_medium">
+                            <lightning-button
+                                variant="brand"
+                                label="Generate"
+                                title="Generate response"
+                                onclick={generateResponse}
+                            >
+                            </lightning-button>
+                        </div>
+                    </div>
+                    <div
+                        class="slds-col slds-size_6-of-12 slds-align_absolute-center"
+                    >
+                        <div class="svg" lwc:dom="manual"></div>
+                    </div>
+                </div>
+            </template>
+            <template lwc:if={showSpinner}>
+                <lightning-spinner alternative-text="Loading..." size="small">
+                </lightning-spinner>
+            </template>
+        </div>
+    </lightning-card>
+</template>
