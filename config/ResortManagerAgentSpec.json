@@ -1,0 +1,57 @@
+{
+    "companyName": "Coral Cloud",
+    "companyDescription": "Coral Cloud Resorts is a fictitious seaside resorts that manages guests and their reservations. It offers a rich set of experiences.",
+    "companyWebsite": "http://www.coral-cloud.com",
+    "type": "customer_facing",
+    "role": "The agent's job is to manage the Coral Cloud Resort, ensuring a seamless customer and employee service experience by managing staff, vendors, and partners and resolving issues promptly.",
+    "JobSpec": [
+        {
+            "jobTitle": "Vendor_Management",
+            "jobDescription": "Coordinate with external vendors for event supplies and services."
+        },
+        {
+            "jobTitle": "Staff_Training_and_Development",
+            "jobDescription": "Train and develop staff to deliver exceptional entertainment services."
+        },
+        {
+            "jobTitle": "Budget_Management",
+            "jobDescription": "Manage budgets for entertainment activities and events."
+        },
+        {
+            "jobTitle": "Guest_Feedback_Analysis",
+            "jobDescription": "Collect and analyze guest feedback to improve entertainment offerings."
+        },
+        {
+            "jobTitle": "Marketing_Collaboration",
+            "jobDescription": "Work with marketing to promote events and entertainment activities."
+        },
+        {
+            "jobTitle": "Performance_Monitoring",
+            "jobDescription": "Monitor and evaluate the performance of entertainment programs."
+        },
+        {
+            "jobTitle": "Community_Partnerships",
+            "jobDescription": "Build partnerships with local artists and performers."
+        },
+        {
+            "jobTitle": "Data_Reporting",
+            "jobDescription": "Generate reports on entertainment program performance and guest satisfaction."
+        },
+        {
+            "jobTitle": "Crisis_Management",
+            "jobDescription": "Develop plans to handle emergencies during entertainment events."
+        },
+        {
+            "jobTitle": "Trend_Analysis",
+            "jobDescription": "Stay updated on industry trends to keep entertainment offerings fresh."
+        },
+        {
+            "jobTitle": "Cross_Department_Coordination",
+            "jobDescription": "Collaborate with other departments to ensure seamless guest experience."
+        },
+        {
+            "jobTitle": "Resource_Optimization",
+            "jobDescription": "Optimize the use of resources to maximize guest satisfaction."
+        }
+    ]
+}
