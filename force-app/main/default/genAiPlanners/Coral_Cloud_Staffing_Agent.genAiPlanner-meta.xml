@@ -10,6 +10,9 @@
     <genAiPlugins>
         <genAiPluginName>SvcCopilotTmpl__GeneralFAQ</genAiPluginName>
     </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Employee_Schedules</genAiPluginName>
+    </genAiPlugins>
     <masterLabel>Coral Cloud Staffing Agent</masterLabel>
     <plannerType>AiCopilot__ReAct</plannerType>
 </GenAiPlanner>
