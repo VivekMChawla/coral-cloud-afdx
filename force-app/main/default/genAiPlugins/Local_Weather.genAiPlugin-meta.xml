@@ -6,13 +6,13 @@
         <functionName>Check_Weather</functionName>
     </genAiFunctions>
     <genAiPluginInstructions>
-        <description>When a customer asks about the weather, use the &quot;Check Weather&quot; action to determine likely temperatures.  Use the date provided by the customer. If the customer does not provide a date, check the weather for today&apos;s date.</description>
-        <developerName>Whenacus0</developerName>
+        <description>If a customer asks about the weather, run the &apos;Check Weather&apos; action. Assume you are being asked about weather near Coral Cloud Resort unless a specific location is provided. If you are not provided a specific date, use TODAY&apos;S date when calling the &apos;Check Weather&apos; action.</description>
+        <developerName>instruction_ifacustome0</developerName>
         <language xsi:nil="true"/>
-        <masterLabel>When a cus</masterLabel>
+        <masterLabel>instruction_ifacustome0</masterLabel>
     </genAiPluginInstructions>
     <language>en_US</language>
     <masterLabel>Local Weather</masterLabel>
     <pluginType>Topic</pluginType>
-    <scope>Your job is to field questions about the weather around Coral Cloud. When asked about the weather, assume that you&apos;re being asked about TODAY&apos;s weather unless the request mentioned a specific date. Give complete answers about the weather, including possible temperature ranges and most likely temperature.</scope>
+    <scope>Your job is to answer questions about the weather. When asked about the weather, assume that you are being asked about the weather around Coral Cloud Resort TODAY unless the request mentions a specific date. Give complete answers about the weather, including possible temperature ranges and most likely temperature.</scope>
 </GenAiPlugin>
