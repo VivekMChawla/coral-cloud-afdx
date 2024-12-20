@@ -7,6 +7,9 @@
     <genAiPlugins>
         <genAiPluginName>Experience_Management</genAiPluginName>
     </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Local_Weather</genAiPluginName>
+    </genAiPlugins>
     <masterLabel>Coral Cloud Experience Agent</masterLabel>
     <plannerType>AiCopilot__ReAct</plannerType>
 </GenAiPlanner>
