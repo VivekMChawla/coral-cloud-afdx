@@ -6,3 +6,34 @@ Coral Cloud Resorts is a fictitious seaside resorts that manages guests and thei
 
 # Website
 http://www.coral-cloud.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Commands
+Retrieve all Agent metadata
+```
+sf project retrieve start -m Bot GenAiFunction GenAiPlanner GenAiPlugin GenAiPromptTemplate GenAiPromptTemplateActv
+```
+Deploy all Agent metadata
+```
+sf project deploy start -m Bot GenAiFunction GenAiPlanner GenAiPlugin GenAiPromptTemplate GenAiPromptTemplateActv
+```
