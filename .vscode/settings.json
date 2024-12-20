@@ -5,5 +5,12 @@
     "**/.sfdx": true
   },
   "salesforcedx-vscode-core.show-cli-success-msg": false,
-  "editor.cursorBlinking": "solid"
+  "editor.cursorBlinking": "solid",
+  "salesforcedx-vscode-slds.basic.mobileValidation": false,
+  "salesforcedx-vscode-slds.basic.invalid": false,
+  "salesforcedx-vscode-slds.basic.bemNaming": false,
+  "salesforcedx-vscode-slds.basic.designToken": false,
+  "salesforcedx-vscode-slds.enabled": false,
+  "salesforcedx-vscode-slds.enhancements.autoSuggest": false,
+  "salesforcedx-vscode-slds.enhancements.density": false
 }
