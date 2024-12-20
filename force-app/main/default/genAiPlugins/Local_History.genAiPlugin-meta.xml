@@ -6,19 +6,13 @@
         <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
     </genAiFunctions>
     <genAiFunctions>
-        <functionName>SvcCopilotTmpl__FinalizeReservation</functionName>
+        <functionName>EmployeeCopilot__UpdateRecordFields</functionName>
     </genAiFunctions>
     <genAiFunctions>
         <functionName>Get_Customer_Details</functionName>
     </genAiFunctions>
     <genAiFunctions>
         <functionName>Get_Experience_Details</functionName>
-    </genAiFunctions>
-    <genAiFunctions>
-        <functionName>SvcCopilotTmpl__GetReservationTimeSlots</functionName>
-    </genAiFunctions>
-    <genAiFunctions>
-        <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
     </genAiFunctions>
     <genAiPluginInstructions>
         <description>If a customer would like information about local history or culture, you should run the action &apos;Get History From Knowledge&apos; action and then provide a summary of what you learn before asking the customer if they&apos;d like to know more.</description>
