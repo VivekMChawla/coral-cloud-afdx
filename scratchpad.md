@@ -7,14 +7,18 @@ Coral Cloud Resorts is a fictitious seaside resorts that manages guests and thei
 # Website
 http://www.coral-cloud.com
 
+# Test Case 1
+- I'd like to book a 1 hour massage anytime after 2pm today. My email is sofiarodriguez@example.com and my membership number is 10008155.
+- Experience_Management
+- 
 
 
 
+# Test Case 2
 
 
 
-
-
+# Test Case 3
 
 
 
