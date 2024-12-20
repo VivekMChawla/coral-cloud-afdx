@@ -18,7 +18,7 @@ http://www.coral-cloud.com
 
 # Test Case 3 (Local_Weather)
 - What's the weather going to be like this afternoon?
-- It's going to be {weather forecast} with a high of {high temperature} and a low of {low temperature}.
+- It's going to be {{weather forecast}} with a high of {{high temperature}} and a low of {{low temperature}}.
 
 
 
