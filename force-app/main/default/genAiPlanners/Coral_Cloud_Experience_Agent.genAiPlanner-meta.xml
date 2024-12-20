@@ -10,6 +10,9 @@
     <genAiPlugins>
         <genAiPluginName>Local_Weather</genAiPluginName>
     </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>Local_History</genAiPluginName>
+    </genAiPlugins>
     <masterLabel>Coral Cloud Experience Agent</masterLabel>
     <plannerType>AiCopilot__ReAct</plannerType>
 </GenAiPlanner>
