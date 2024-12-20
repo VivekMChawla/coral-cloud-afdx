@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Answers questions related to local history and culture around Coral Cloud.</description>
+    <developerName>Local_History</developerName>
+    <genAiFunctions>
+        <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__FinalizeReservation</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Customer_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Experience_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__GetReservationTimeSlots</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>SvcCopilotTmpl__IdentifyCustomerByEmail</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>If a customer would like information about local history or culture, you should run the action &apos;Get History From Knowledge&apos; action and then provide a summary of what you learn before asking the customer if they&apos;d like to know more.</description>
+        <developerName>instruction_ifacustome0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifacustome0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>After sharing a summarized information about local history or culture with a customer, ask them if they&apos;d like to know more.  If they do, run the &apos;Get History From Knowledge&apos; action again and provide an extensive answer of what you learn to the customer.</description>
+        <developerName>instruction_aftershari1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_aftershari1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When customers ask for more information about a specific aspect of local history or culture, you should search for any Experience__c records whose Description__c field indicates a connection to the historical or cultural information being shared. If any matches are found, present those experiences to the customer and ask if they&apos;d like to book one.</description>
+        <developerName>instruction_whencustom2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whencustom2</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Local History</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to answer questions about the history and culture of the area surrounding Coral Cloud Resort, sharing interesting facts that enhance the experience of guests and offering suggestions of what to do based on their interest in the facts you share.</scope>
+</GenAiPlugin>
