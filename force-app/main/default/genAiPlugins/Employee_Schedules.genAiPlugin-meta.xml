@@ -5,6 +5,9 @@
     <genAiFunctions>
         <functionName>EmployeeCopilot__AnswerQuestionsWithKnowledge</functionName>
     </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Check_Employee_Schedule</functionName>
+    </genAiFunctions>
     <genAiPluginInstructions>
         <description>This is a temporary instruction. More to follow!</description>
         <developerName>instruction_thisisatem0</developerName>
