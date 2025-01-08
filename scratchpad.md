@@ -42,3 +42,11 @@ Deploy all Agent metadata
 ```
 sf project deploy start -m Bot GenAiFunction GenAiPlanner GenAiPlugin GenAiPromptTemplate GenAiPromptTemplateActv
 ```
+Deploy Agent Test Metadata
+```
+sf project deploy start -m AiEvaluationDefinition AiEvaluationTestSet --concise
+```
+Deploy Two Apex Classes
+```
+sf project deploy start -m "ApexClass:ChangePass*" --concise 
+```
