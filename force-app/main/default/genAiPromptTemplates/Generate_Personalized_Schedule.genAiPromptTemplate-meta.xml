@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPromptTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <activeVersion>28Uc/ByD2ndggh8bLwrADFelxJZ6eJtKF6tzAd2chFw=_1</activeVersion>
-    <createdInVersion>63.0</createdInVersion>
+    <activeVersionIdentifier>28Uc/ByD2ndggh8bLwrADFelxJZ6eJtKF6tzAd2chFw=_1</activeVersionIdentifier>
     <description>Presents a list of today&apos;s resort activities that match the guest&apos;s interest.</description>
     <developerName>Generate_Personalized_Schedule</developerName>
     <masterLabel>Generate Personalized Schedule</masterLabel>

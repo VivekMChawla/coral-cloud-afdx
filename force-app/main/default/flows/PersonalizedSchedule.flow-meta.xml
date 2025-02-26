@@ -78,7 +78,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>PromptGenerationResult</name>
-            <fieldText>&lt;p&gt;NOTE we removed { ! Invoke_Prompt.promptResponse } because it was causing a Field Integregity Exception.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;{!Invoke_Prompt.promptResponse}&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
