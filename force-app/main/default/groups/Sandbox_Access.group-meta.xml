@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Group xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Public group for users who should be added to sandboxes when they&apos;re created.</description>
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <name>Sandbox Access</name>
+</Group>

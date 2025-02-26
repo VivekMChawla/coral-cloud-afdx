@@ -17,7 +17,7 @@
         <inputParameters>
             <name>serviceChannelId</name>
             <value>
-                <stringValue>0N9aj00000080HNCAY</stringValue>
+                <stringValue>0N9ed00000001QjCAI</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -35,7 +35,7 @@
         <inputParameters>
             <name>routingType</name>
             <value>
-                <stringValue>Bot</stringValue>
+                <stringValue>Copilot</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -47,7 +47,7 @@
         <inputParameters>
             <name>queueId</name>
             <value>
-                <stringValue>00Gaj00000A28k0EAB</stringValue>
+                <stringValue>00Ged000000RU5IEAW</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -70,27 +70,27 @@
         </inputParameters>
         <inputParameters>
             <name>botId</name>
-            <value>
-                <stringValue>0Xxaj0000002htjCAA</stringValue>
-            </value>
         </inputParameters>
         <inputParameters>
             <name>botLabel</name>
+        </inputParameters>
+        <inputParameters>
+            <name>copilotId</name>
             <value>
-                <stringValue>Coral Cloud Experience Agent</stringValue>
+                <stringValue>0Xxed00000002BVCAY</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>isQueueVariable</name>
+            <name>copilotLabel</name>
             <value>
-                <booleanValue>false</booleanValue>
+                <stringValue>Guest Experience Agent</stringValue>
             </value>
         </inputParameters>
         <nameSegment>routeWork</nameSegment>
         <offset>0</offset>
-        <versionSegment>1</versionSegment>
     </actionCalls>
-    <apiVersion>61.0</apiVersion>
+    <apiVersion>63.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <description>This omni-channel flow is used to route a messaging session to ESA</description>
     <environments>Default</environments>
     <interviewLabel>Route to ESA {!$Flow.CurrentDateTime}</interviewLabel>

@@ -2,10 +2,10 @@ public with sharing class PersonalizedGuestExperiences {
 
     // Make this method available for grounding
     // the Generate_Personalized_Schedule prompt template
-    @InvocableMethod
+    @InvocableMethod()
     public static List<Response> getSessions(List<Request> requests) {
         Request input = requests[0];
-        Contact contact = input.myContact;
+        Contact contact = input.guestContact;
 
         List<Session__c> sessions =
             ExperienceSessionController.getSessions(contact);
@@ -22,7 +22,7 @@ public with sharing class PersonalizedGuestExperiences {
     // that may be different on each prompt template
     public class Request {
         @InvocableVariable(required=true)
-        public Contact myContact;
+        public Contact guestContact;
     }
 
     public class Response {

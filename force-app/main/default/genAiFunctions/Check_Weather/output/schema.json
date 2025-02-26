@@ -3,7 +3,7 @@
   "properties" : {
     "maxTemperature" : {
       "title" : "maxTemperature",
-      "description" : "Maximum temperature in Celsius at Coral Cloud Resorts location for the provided date.",
+      "description" : "Maximum temperature in Celsius at Coral Cloud Resorts location for the provided date",
       "lightning:type" : "lightning__numberType",
       "lightning:isPII" : false,
       "copilotAction:isDisplayable" : true,
@@ -11,7 +11,7 @@
     },
     "minTemperature" : {
       "title" : "minTemperature",
-      "description" : "Minimum temperature in Celsius at Coral Cloud Resorts location for the provided date.",
+      "description" : "Minimum temperature in Celsius at Coral Cloud Resorts location for the provided date",
       "lightning:type" : "lightning__numberType",
       "lightning:isPII" : false,
       "copilotAction:isDisplayable" : true,

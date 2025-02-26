@@ -4,5 +4,7 @@
     <invocationTarget>Get_Experience_Details</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
     <masterLabel>Get Experience Details</masterLabel>
+    <progressIndicatorMessage>Getting Experience details</progressIndicatorMessage>
 </GenAiFunction>

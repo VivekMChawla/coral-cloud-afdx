@@ -13,16 +13,16 @@
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
-            <name>Input:myContact</name>
+            <name>Input:guestContact</name>
             <value>
                 <elementReference>Get_Contact</elementReference>
             </value>
         </inputParameters>
         <nameSegment>Generate_Personalized_Schedule</nameSegment>
         <storeOutputAutomatically>true</storeOutputAutomatically>
-        <versionSegment>1</versionSegment>
     </actionCalls>
     <apiVersion>61.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <description>This flow is used to take a contacts interests and generate a report of the available Experiences that they can enroll in today.</description>
     <environments>Default</environments>
     <interviewLabel>Personalize Schedule {!$Flow.CurrentDateTime}</interviewLabel>
@@ -78,7 +78,7 @@
         <allowPause>true</allowPause>
         <fields>
             <name>PromptGenerationResult</name>
-            <fieldText>&lt;p&gt;{!Invoke_Prompt.promptResponse}&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;NOTE we removed { ! Invoke_Prompt.promptResponse } because it was causing a Field Integregity Exception.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>

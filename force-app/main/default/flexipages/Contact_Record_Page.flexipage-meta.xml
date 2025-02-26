@@ -464,9 +464,6 @@
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Contact.Personalized_Schedule</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>Global.NewCase</value>
                         </valueListItems>
                         <valueListItems>
@@ -530,12 +527,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
                 <identifier>RecordNameField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Membership_Number__c</fieldItem>
-                <identifier>RecordMembership_Number__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-01cf81ef-e902-4dfc-bb01-169bf818a5b5</name>

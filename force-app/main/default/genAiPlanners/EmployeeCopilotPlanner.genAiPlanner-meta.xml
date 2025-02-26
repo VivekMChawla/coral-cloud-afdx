@@ -2,7 +2,10 @@
 <GenAiPlanner xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Planner for ReAct-based Employee copilot.</description>
     <genAiPlugins>
-        <genAiPluginName>MigrationDefaultTopic</genAiPluginName>
+        <genAiPluginName>EmployeeCopilot__GeneralCRM</genAiPluginName>
+    </genAiPlugins>
+    <genAiPlugins>
+        <genAiPluginName>EmployeeCopilot__OOTBSingleRecordSummary</genAiPluginName>
     </genAiPlugins>
     <masterLabel>EmployeeCopilotPlanner</masterLabel>
     <plannerType>AiCopilot__ReAct</plannerType>

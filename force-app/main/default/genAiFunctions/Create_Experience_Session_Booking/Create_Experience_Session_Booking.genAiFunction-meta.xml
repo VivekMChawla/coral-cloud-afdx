@@ -4,5 +4,7 @@
     <invocationTarget>Create_Experience_Session_Booking</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
     <masterLabel>Create Experience Session Booking</masterLabel>
+    <progressIndicatorMessage>Booking your Experience</progressIndicatorMessage>
 </GenAiFunction>

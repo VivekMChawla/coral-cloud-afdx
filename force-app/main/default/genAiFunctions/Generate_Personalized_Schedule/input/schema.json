@@ -1,9 +1,9 @@
 {
-  "required" : [ "Input:myContact" ],
+  "required" : [ "Input:guestContact" ],
   "unevaluatedProperties" : false,
   "properties" : {
-    "Input:myContact" : {
-      "title" : "Contact",
+    "Input:guestContact" : {
+      "title" : "Guest Contact",
       "description" : "Contact for which the personalized schedule should be generated. Must be a valid JSON representing the contact info, chained from having executed the Get Customer Details action.",
       "lightning:type" : "lightning__recordInfoType",
       "lightning:sObjectInfo" : {

@@ -12,6 +12,14 @@
         <response>Text STOP to opt out of further messages.</response>
         <type>HelpResponse</type>
     </automatedResponses>
+    <embeddedConfig>
+        <anonymousUserJwtExpirationTime>360</anonymousUserJwtExpirationTime>
+        <authMode>UnAuth</authMode>
+        <isAttachmentUploadEnabled>true</isAttachmentUploadEnabled>
+        <isEstimatedWaitTimeEnabled>false</isEstimatedWaitTimeEnabled>
+        <isFallbackMessageEnabled>false</isFallbackMessageEnabled>
+        <isSaveTranscriptEnabled>false</isSaveTranscriptEnabled>
+    </embeddedConfig>
     <masterLabel>ESA Channel</masterLabel>
     <messagingChannelType>EmbeddedMessaging</messagingChannelType>
     <messagingKeywords>

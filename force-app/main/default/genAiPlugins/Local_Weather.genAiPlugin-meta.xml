@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <description>Answers questions related to local weather around Coral Cloud.</description>
+    <canEscalate>false</canEscalate>
+    <description>This topic addresses customer inquiries related to current and forecast weather conditions at Coral Cloud Resort, including temperature, chance of rain, and other weather details.</description>
     <developerName>Local_Weather</developerName>
     <genAiFunctions>
         <functionName>Check_Weather</functionName>
     </genAiFunctions>
     <genAiPluginInstructions>
-        <description>If a customer asks about the weather, run the &apos;Check Weather&apos; action. Assume you are being asked about weather near Coral Cloud Resort unless a specific location is provided. If you are not provided a specific date, use TODAY&apos;S date when calling the &apos;Check Weather&apos; action.</description>
+        <description>If a customer asks about the weather, you should run the &apos;Check Weather&apos; action and then summarize the results with improved readability. Always assume you are being asked about weather near Coral Cloud Resort.</description>
         <developerName>instruction_ifacustome0</developerName>
         <language xsi:nil="true"/>
         <masterLabel>instruction_ifacustome0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer DOES NOT provide a specific date, use TODAY&apos;S date when running the &apos;Check Weather&apos; action.  If the customer DOES provide a specific date, ensure it IS NOT in the past.</description>
+        <developerName>instruction_ifthecusto1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifthecusto1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Convert the date to yyyy-MM-dd. format before using it for the &apos;Check Weather&apos; action.</description>
+        <developerName>instruction_convertthe2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_convertthe2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Present all temperature forecasts in degrees Celsius. Only share temperature forecasts in degrees Fahrenheit if the customer asks you to.</description>
+        <developerName>instruction_presentall3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_presentall3</masterLabel>
     </genAiPluginInstructions>
     <language>en_US</language>
     <masterLabel>Local Weather</masterLabel>

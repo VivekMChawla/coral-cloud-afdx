@@ -4,5 +4,7 @@
     <invocationTarget>Generate_Personalized_Schedule</invocationTarget>
     <invocationTargetType>generatePromptResponse</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>true</isIncludeInProgressIndicator>
     <masterLabel>Generate Personalized Schedule</masterLabel>
+    <progressIndicatorMessage>Generating a personalized schedule</progressIndicatorMessage>
 </GenAiFunction>
