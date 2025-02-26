@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Guest_Experience_Agent</members>
+        <name>Bot</name>
+    </types>
+    <types>
+        <members>Guest_Experience_Agent</members>
+        <name>GenAiPlanner</name>
+    </types>
+    <version>63.0</version>
+</Package>
