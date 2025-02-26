@@ -1,0 +1,18 @@
+agentType: customer
+companyName: Coral Cloud
+companyDescription: A luxury hotel
+role: Help guests
+maxNumOfTopics: 5
+enrichLogs: false
+tone: casual
+topics:
+  - name: Personalized Guest Check-In
+    description: Streamline guest check-in with tailored preferences.
+  - name: Room Service Automation
+    description: Automate room service requests and delivery.
+  - name: Guest Feedback Collection
+    description: Gather and analyze guest feedback efficiently.
+  - name: Local Attraction Recommendations
+    description: Provide personalized recommendations for local attractions.
+  - name: Maintenance Issue Reporting
+    description: Automate the reporting and tracking of maintenance issues.

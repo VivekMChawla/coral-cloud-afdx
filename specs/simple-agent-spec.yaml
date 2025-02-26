@@ -1,0 +1,27 @@
+agentType: customer
+companyName: Coral Cloud
+companyDescription: A resort.
+role: Help guests.
+maxNumOfTopics: 10
+enrichLogs: false
+topics:
+  - name: Guest Check-In
+    description: Automate the guest check-in process.
+  - name: Room Allocation
+    description: Assign rooms based on guest preferences.
+  - name: Concierge Services
+    description: Provide information on local attractions.
+  - name: Dining Reservations
+    description: Manage restaurant bookings for guests.
+  - name: Event Scheduling
+    description: Organize events and activities for guests.
+  - name: Housekeeping Requests
+    description: Handle guest requests for room cleaning.
+  - name: Maintenance Alerts
+    description: Notify staff about maintenance issues.
+  - name: Billing and Payments
+    description: Streamline the guest billing process.
+  - name: Guest Feedback
+    description: Collect and analyze guest reviews.
+  - name: Loyalty Program Management
+    description: Manage guest loyalty rewards and points.
