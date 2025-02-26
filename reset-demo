@@ -1,0 +1,93 @@
+#!/bin/bash
+#
+# This script resets the Developer Tools demo workspace by doing the following:
+# 1. Resets the demo to the starting commit.
+# 2. Pushes the new commit state to the remote repository.
+# 3. Returns to the main branch.
+# 4. Deploys original versions of Apex classes.
+#
+# Exit on any error
+set -e
+
+branchName=WI-000003
+tagName=DemoStart
+demoDir=/home/codebuilder/coral-cloud-afdx
+taskName="DevTools Demo Reset"
+
+# Ensure the script is being run from inside the demo directory.
+if [ "$(pwd)" != "$demoDir" ]; then
+    echo -e  "\u274C"" Error: Current directory is not $demoDir"
+    exit 1
+fi
+
+# Handle script errors.
+function handle_error {
+  echo
+  echo -e  "\u274C"" $taskName Failed"
+  echo
+}
+
+# Handle script success.
+function handle_success {
+  echo
+  echo "───────────────────────────────────────────────────────────────────────"
+  echo
+  echo -e "\u2705"" $taskName Complete"
+  echo
+  echo "───────────────────────────────────────────────────────────────────────"
+  echo
+}
+
+# Send trapped errors to the error handler.
+trap handle_error ERR
+
+# Announce that the demo reset process has started.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+echo -e "\U1F680"" Starting $taskName"
+
+# Reset the demo to the starting commit.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(1) Resetting to the demo to the starting commit."
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+git reset --hard $tagName
+
+# Disable the ERR trap and allow script errors
+# This is requied in case the reset script is run when
+# the local repo does not have the WI-000002 branch.
+trap - ERR
+set +e
+
+# Push the new commit state to the remote repository.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(2) Pushing the new commit state to the remote repository."
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+git push origin $branchName --force
+
+# Enable the ERR trap and disallow script errors.
+set -e
+trap handle_error ERR
+
+# Return to the main branch.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(3) Returning to the main branch."
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+git checkout main
+
+# Deploy original versions of Apex classes.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(4) Deploying original versions of Apex classes."
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+sf project deploy start --source-dir force-app/main/default/classes --ignore-conflicts --concise
+
+# Script completed successfully.
+handle_success
