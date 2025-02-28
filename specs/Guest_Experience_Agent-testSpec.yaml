@@ -7,7 +7,7 @@ testCases:
   - utterance: Are there any resort experiences that match my interestes today?
     expectedTopic: Experience_Management
     expectedActions: []
-    expectedOutcome: The agent should politely ask for the guest's email address AND membership number.
+    expectedOutcome: The agent should politely ask ONLY for the guest's email address.
   - utterance: What will the weather be like today?
     expectedTopic: Local_Weather
     expectedActions:
