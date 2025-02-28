@@ -15,11 +15,11 @@
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>The agent should politely ask for the guest&apos;s email address and membership number.</expectedValue>
+            <expectedValue>The agent should politely ask ONLY for the guest&apos;s email address.</expectedValue>
             <name>bot_response_rating</name>
         </expectation>
         <inputs>
-            <utterance>Is there a beach boot camp experience today?</utterance>
+            <utterance>Are there any resort experiences that match my interestes today?</utterance>
         </inputs>
         <number>1</number>
     </testCase>
