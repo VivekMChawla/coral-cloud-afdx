@@ -15,7 +15,7 @@
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>Could you let me know what type of event you&apos;re interested in? For example, are you looking for cultural events, family-friendly activities, or something else?</expectedValue>
+            <expectedValue>The response should include a prompt for the user to specify the type of event they are interested in. For example, &quot;Could you let me know what type of event you&apos;re interested in? For example, are you looking for cultural events, family-friendly activities, or something else?&quot;</expectedValue>
             <name>bot_response_rating</name>
         </expectation>
         <inputs>
@@ -33,7 +33,7 @@
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>The weather today is sunny with a high of 75 degrees and a low of 60 degrees. Would you like me to check the weather for tomorrow as well?</expectedValue>
+            <expectedValue>The response should include weather related information, such as temperature and weather condisions. For example, &quot;The temperature is 75 degrees Fahrenheit and skies are clear with a gentle breeze.&quot;</expectedValue>
             <name>bot_response_rating</name>
         </expectation>
         <inputs>
