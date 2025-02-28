@@ -1,12 +1,6 @@
 # DevTools Demo
 
-This demo showcases the suite of Salesforce Pro-Code Developer Tools.
-
-## Prepare the Code Builder Demo Environment
-
-```bash
-curl https://raw.githubusercontent.com/vivekmchawla/df24-devtools-demo/main/setup-df24-devtools-demo | bash
-```
+This demo showcases the suite of Agentforce DX Pro-Code Developer Tools.
 
 ## Run Code Analyzer 5.0 Scan (All Rules)
 ```bash
