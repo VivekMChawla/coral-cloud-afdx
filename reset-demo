@@ -81,13 +81,13 @@ echo "────────────────────────�
 echo
 git checkout main
 
-# Deploy original versions of Apex classes.
+# Deploy original versions of Apex Classes and Agent Tests.
 echo
 echo "───────────────────────────────────────────────────────────────────────"
-echo "(4) Deploying original versions of Apex classes."
+echo "(4) Deploying original versions of Apex Classes and Agent Tests."
 echo "───────────────────────────────────────────────────────────────────────"
 echo
-sf project deploy start --source-dir force-app/main/default/classes --ignore-conflicts --concise
+sf project deploy start --manifest manifests/DemoReset.package.xml --ignore-conflicts --concise
 
 # Script completed successfully.
 handle_success
