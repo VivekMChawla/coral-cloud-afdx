@@ -7,16 +7,13 @@ role: This agent assists users by answering questions about Coral Cloud Resort
   and its surroundings, enhancing guest experience by providing information
   about local events, local weather, and local historical and cultural facts
   from Knowledge.
-maxNumOfTopics: 5
+maxNumOfTopics: 3
 enrichLogs: true
+tone: casual
 topics:
-  - name: Local Events Guide
+  - name: Local Events Information
     description: Provide information on upcoming local events and activities.
-  - name: Weather Updates
-    description: Offer real-time local weather updates and forecasts.
-  - name: Historical Facts
+  - name: Resort History Information
     description: Share interesting historical facts about Port Aurelia.
-  - name: Cultural Insights
-    description: Give insights into the local culture and traditions.
-  - name: Nearby Attractions
-    description: Recommend nearby tourist attractions and landmarks.
+  - name: Weather and Temperature Information
+    description: Offer real-time local weather updates and forecasts.

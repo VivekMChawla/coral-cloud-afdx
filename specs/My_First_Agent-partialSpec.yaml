@@ -1,0 +1,7 @@
+agentType: customer
+companyName: Coral Cloud
+companyDescription: A luxury hotel.
+role: Help guests.
+maxNumOfTopics: 5
+enrichLogs: false
+tone: casual
