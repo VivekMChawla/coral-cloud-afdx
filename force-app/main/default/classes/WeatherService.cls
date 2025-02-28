@@ -23,7 +23,7 @@ public class WeatherService {
         Http http = new Http();
         HttpResponse res = http.send(req);
         if (res.getStatusCode() != 200) {
-            throw new CalloutException('Bad response: ' + res);
+            throw new CalloutException('Bad response: ' + res + ', ' + req.getEndpoint());
         }
 
         // The response contains a list of temperatures for different times of the day
