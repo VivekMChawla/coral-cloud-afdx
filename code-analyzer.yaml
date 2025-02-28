@@ -11,7 +11,7 @@ config_root: null # Last calculated by the config command as: "/home/codebuilder
 
 # Folder where to store log files. May be an absolute path or a path relative to config_root.
 # If unspecified, or if specified as null, then the value is automatically chosen to be your machine's default temporary directory.
-log_folder: null # Last calculated by the config command as: "/tmp"
+log_folder: ./code-analyzer-logs # Last calculated by the config command as: "/tmp"
 
 # Rule override settings of the format rules.{engine_name}.{rule_name}.{property_name} = {override_value} where:
 #   {engine_name} is the name of the engine containing the rule that you want to override.
