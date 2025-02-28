@@ -1011,7 +1011,7 @@ rules:
         - Security
         - Apex
     "ApexSharingViolations":
-      severity: 3
+      severity: 2
       tags:
         - Recommended
         - Security
