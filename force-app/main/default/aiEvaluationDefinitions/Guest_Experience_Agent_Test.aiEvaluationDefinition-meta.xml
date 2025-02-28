@@ -15,7 +15,7 @@
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>The agent should politely ask ONLY for the guest&apos;s email address.</expectedValue>
+            <expectedValue>The agent should politely ask for the guest&apos;s email address AND membership number.</expectedValue>
             <name>bot_response_rating</name>
         </expectation>
         <inputs>
@@ -33,7 +33,7 @@
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>The agent should provide a forecast including temperature and weather conditions.</expectedValue>
+            <expectedValue>The agent should provide a forecast including the expected temperature.</expectedValue>
             <name>bot_response_rating</name>
         </expectation>
         <inputs>
