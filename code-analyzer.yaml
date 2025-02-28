@@ -432,7 +432,7 @@ rules:
         - BestPractices
         - Typescript
     "@typescript-eslint/no-unused-vars":
-      severity: 2
+      severity: 4
       tags:
         - Recommended
         - ErrorProne
@@ -802,7 +802,7 @@ rules:
         - Javascript
         - Typescript
     "no-unused-vars":
-      severity: 2
+      severity: 4
       tags:
         - Recommended
         - ErrorProne
@@ -1237,7 +1237,7 @@ rules:
         - CodeStyle
         - Apex
     "MethodNamingConventions":
-      severity: 3
+      severity: 4
       tags:
         - Recommended
         - CodeStyle
