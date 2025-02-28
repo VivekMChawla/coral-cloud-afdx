@@ -23,7 +23,7 @@ private class SampleDataTest {
         // Check for the right amount of new sessions
         List<Session__c> sessions = [SELECT Date__c FROM Session__c];
         Assert.areEqual(
-            3 * // This must be changed to `2` to pass the test.
+            2 * // This must be changed from `3` to `2` to pass the test.
             (SampleDataGenerator.PAST_DAYS_COVERED +
             SampleDataGenerator.FUTURE_DAYS_COVERED),
             sessions.size(),
