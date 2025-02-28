@@ -15,7 +15,7 @@
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>The agent should politely ask for the guest&apos;s email address AND membership number.</expectedValue>
+            <expectedValue>The agent should politely ask for ONLY the guest&apos;s email address.</expectedValue>
             <name>bot_response_rating</name>
         </expectation>
         <inputs>
