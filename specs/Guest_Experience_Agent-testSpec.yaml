@@ -1,0 +1,15 @@
+name: Guest Experience Agent Test
+description: Functional tests for the Local Info Agent.
+subjectType: AGENT
+subjectName: Guest_Experience_Agent
+subjectVersion: v1
+testCases:
+  - utterance: Are there any resort experiences that match my interestes today?
+    expectedTopic: Experience_Management
+    expectedActions: []
+    expectedOutcome: The agent should politely ask for the guest's email address and membership number.
+  - utterance: What will the weather be like today?
+    expectedTopic: Local_Weather
+    expectedActions:
+      - Check_Weather
+    expectedOutcome: The agent should provide a forecast including temperature and weather conditions.
