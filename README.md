@@ -12,12 +12,12 @@ sf agent test run --api-name Guest_Experience_Agent_Test --wait 5
 sf agent test results --job-id xxxxxx --json
 ```
 
-## Run Code Analyzer 5.0 Scan (All Rules)
+## Run Code Analyzer 5.0 Scan (Recommended Rules | HTML Output)
 ```bash
 sf code-analyzer run --output-file=code-analysis.html
 ```
 
-## Run Code Analyzer 5.0 Scan (Custom Rules)
+## Run Code Analyzer 5.0 Scan (Recommended Rules | Sev2 | Detail Output)
 ```bash
-sf code-analyzer run --severity-threshold 3 --view=detail
+sf code-analyzer run --rule-selector Recommended:2 --view=detail
 ```
