@@ -19,6 +19,9 @@ if ! git diff-index --quiet HEAD --; then
     exit 1
 fi
 
+# Push the current state of 'main' to the origin
+git push origin main
+
 # List of branch names to delete and create
 branches=("WI-000000" "WI-000001" "WI-000002" "WI-000003")
 
