@@ -9,7 +9,6 @@
 # Exit on any error
 set -e
 
-branchName=WI-000003
 tagName=DemoStart
 demoDir=/home/codebuilder/coral-cloud-afdx
 taskName="DevTools Demo Reset"
