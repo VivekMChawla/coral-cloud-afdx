@@ -50,14 +50,22 @@ echo -e "\U1F680"" Starting $taskName"
 # Reset the demo to the starting commit.
 echo
 echo "───────────────────────────────────────────────────────────────────────"
-echo "(1) Resetting to the demo to the starting commit."
+echo "(1-A) Resetting to the demo to the starting commit."
 echo "───────────────────────────────────────────────────────────────────────"
 echo
 git reset --hard $tagName
 
+# Clear all Git stash entries.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(1-B) Clearing all Git stash entries."
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+git stash clear
+
 # Disable the ERR trap and allow script errors
 # This is requied in case the reset script is run when
-# the local repo does not have the WI-000002 branch.
+# the local repo does not have the tagged branch.
 trap - ERR
 set +e
 
