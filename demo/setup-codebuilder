@@ -209,4 +209,13 @@ else
   echo "--> Git Email: $(git config --get --global user.email)"
 fi
 
+# Set the Git config value for default branch names to "main".
+# This prevents new repositories from using the default "master" branch name.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(12) Setting the default branch name to 'main'"
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+git config --global init.defaultBranch main
+
 handle_success
