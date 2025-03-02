@@ -1,0 +1,212 @@
+#!/bin/bash
+#
+# This script helps set up the CodeBuilder environment used
+# by the Coral Cloud AFDX Developer Tools demos by doing the following:
+# 1. Updates the Salesforce CLI.
+# 2. Installs code Analyzer 5
+# 3. Installs the Typescript NPM package globally.
+# 4. Removes the `coral-cloud-afdx` folder (if it exists).
+# 5. Sets the global Git config values for `user.name` and `user.email`
+#    This is a requirement for the Git extension for VS Code to work.
+# 6. Clones the `coral-cloud-afdx` repository from GitHub.
+#
+# Exit on any error
+set -e
+
+# Define key variables.
+codeBuilderHomeDir="/home/codebuilder"
+demoProjectName="coral-cloud-afdx"
+demoRepoUrl="https://github.com/VivekMChawla/coral-cloud-afdx.git"
+taskName="AFDX DevTools Demo: Code Builder Environment Setup"
+
+# Ensure the script is being run from the Code Builder home directory.
+if [ "$(pwd)" != "$codeBuilderHomeDir" ]; then
+    echo -e  "\u274C"" Error: Current directory is not $codeBuilderHomeDir"
+    exit 1
+fi
+
+# Prevent release notes from being shown after updating Salesforce CLI.
+export SF_HIDE_RELEASE_NOTES=true
+export SF_HIDE_RELEASE_NOTES_FOOTER=true
+
+# Handle script errors.
+function handle_error {
+  echo
+  echo -e  "\u274C"" $taskName Failed"
+  echo
+}
+
+# Handle script success.
+function handle_success {
+  echo
+  echo "───────────────────────────────────────────────────────────────────────"
+  echo
+  echo -e "\u2705"" $taskName Complete"
+  echo
+  echo "───────────────────────────────────────────────────────────────────────"
+  echo
+}
+
+# Send trapped errors to the error handler.
+trap handle_error ERR
+
+# Announce that the process has started.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+echo -e "\U1F680"" Starting $taskName"
+
+# Update Salesforce CLI.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(1) Updating Salesforce CLI (if needed)"
+echo "───────────────────────────────────────────────────────────────────────"
+sf update stable 
+
+# Reset CLI plugins.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(2-A) Resetting CLI Plugins"
+echo "───────────────────────────────────────────────────────────────────────"
+sf plugins reset --hard
+
+# Install Code Analyzer 5.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(2-B) Installing Code Analyzer 5"
+echo "───────────────────────────────────────────────────────────────────────"
+sf plugins install code-analyzer
+
+# Install Agentforce DX.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(2-C) Installing Agentforce DX"
+echo "───────────────────────────────────────────────────────────────────────"
+sf plugins install agent
+
+# Install Typescript.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(3) Installing Typescript"
+echo "───────────────────────────────────────────────────────────────────────"
+npm install -g typescript
+
+# Remove the demo folder (if it exists).
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(4) Removing the $demoProjectName folder"
+echo "───────────────────────────────────────────────────────────────────────"
+rm -rf $codeBuilderHomeDir/$demoProjectName
+echo
+echo "Folder removed"
+
+# Clone the demo repository from GitHub.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(5) Cloning the $demoProjectName repository"
+echo "───────────────────────────────────────────────────────────────────────"
+git clone $demoRepoUrl
+
+# Create the code-analyzer-logs folder inside the demo project.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(6) Creating the code-analyzer-logs folder inside the demo project."
+echo "───────────────────────────────────────────────────────────────────────"
+mkdir $codeBuilderHomeDir/$demoProjectName/code-analyzer-logs
+echo
+echo "Folder created"
+
+# Install Node.js dependencies inside demo project.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(7) Installing Node.js dependencies inside the demo project."
+echo "───────────────────────────────────────────────────────────────────────"
+if [ -f "$codeBuilderHomeDir/$demoProjectName/package.json" ]; then
+  npm install $codeBuilderHomeDir/$demoProjectName --prefix $codeBuilderHomeDir/$demoProjectName
+else
+  echo "No package.json found. Skipping npm install"
+fi
+
+# Create a .sf/config.json file to set the default org.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(8) Creating a .sf/config.json file to set the default org."
+echo "───────────────────────────────────────────────────────────────────────"
+# Define the file path
+config_file="$codeBuilderHomeDir/$demoProjectName/.sf/config.json"
+# Create the directory if it doesn't exist
+mkdir -p "$(dirname "$config_file")"
+# Write the JSON content to the file
+cat <<EOF > "$config_file"
+{
+  "target-org": "SandboxOrg"
+}
+EOF
+echo
+echo "Created $config_file with SandboxOrg as target-org."
+
+# Create a .sfdx/sfdx-config.json file to set the default org.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(9) Creating a .sfdx/sfdx-config.json file to set the default org."
+echo "───────────────────────────────────────────────────────────────────────"
+# Define the file path
+config_file="$codeBuilderHomeDir/$demoProjectName/.sfdx/sfdx-config.json"
+# Create the directory if it doesn't exist
+mkdir -p "$(dirname "$config_file")"
+# Write the JSON content to the file
+cat <<EOF > "$config_file"
+{
+  "defaultusername": "SandboxOrg"
+}
+EOF
+echo
+echo "Created $config_file with SandboxOrg as defaultusername."
+
+# Enable autocomplete for the Salesforce CLI.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(10) Enabling autocomplete for the Salesforce CLI."
+echo "───────────────────────────────────────────────────────────────────────"
+rm -f /home/codebuilder/.bashrc.local
+printf "eval $(sf autocomplete script bash)" >> /home/codebuilder/.bashrc.local
+source /home/codebuilder/.bashrc
+echo
+echo "Autocomplete enabled."
+
+# Disable the ERR trap and allow script errors
+# This is requied because bash interprets an attempt
+# to read an unset git config variable as an error.
+trap - ERR
+set +e
+
+# Save existing global Git config in variables.
+github_user_name=$(git config --get --global user.name)
+github_user_email=$(git config --get --global user.email)
+
+# Enable the ERR trap and disallow script errors.
+set -e
+trap handle_error ERR
+
+# Set generic Git config values for name and email, but
+# ONLY if these global config values were NOT already set.
+# This is required to before using Git features in VS Code.
+echo
+echo "───────────────────────────────────────────────────────────────────────"
+echo "(11) Setting global Git name/email config"
+echo "───────────────────────────────────────────────────────────────────────"
+echo
+if [ -n "$github_user_name" ]; then
+  echo "--> Git Name: $github_user_name (already set)"
+else
+  git config --global user.name "Developer Benjamin"
+  echo "--> Git Name: $(git config --get --global user.name)"
+fi
+if [ -n "$github_user_email" ]; then
+  echo "--> Git Name: $github_user_email (already set)"
+else
+  git config --global user.email "benjamin@apprana.com"
+  echo "--> Git Email: $(git config --get --global user.email)"
+fi
+
+handle_success
