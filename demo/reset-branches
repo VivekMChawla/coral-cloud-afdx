@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Ensure the currently checked-out branch is 'main'
+current_branch=$(git symbolic-ref --short HEAD)
+if [ "$current_branch" != "main" ]; then
+    echo "Error: You must be on the 'main' branch to run this script. Currently on '$current_branch'."
+    exit 1
+fi
+
+# Ensure there are no untracked files
+if [ -n "$(git ls-files --others --exclude-standard)" ]; then
+    echo "Error: There are untracked files in the working directory. Please commit or remove them before running this script."
+    exit 1
+fi
+
+# Ensure all staged work has been committed
+if ! git diff-index --quiet HEAD --; then
+    echo "Error: There are staged changes that have not been committed. Please commit them before running this script."
+    exit 1
+fi
+
+# List of branch names to delete and create
+branches=("WI-000000" "WI-000001" "WI-000002" "WI-000003")
+
+# Delete the DemoStart tag locally and on the remote
+git tag -d DemoStart 2>/dev/null || echo "Local tag DemoStart does not exist"
+git push origin --delete DemoStart 2>/dev/null || echo "Remote tag DemoStart does not exist"
+
+# Loop through the list and delete each branch locally and on the remote
+for branch in "${branches[@]}"; do
+    # Delete the branch locally
+    git branch -D "$branch" 2>/dev/null || echo "Local branch $branch does not exist"
+    
+    # Delete the branch on the remote
+    git push origin --delete "$branch" 2>/dev/null || echo "Remote branch $branch does not exist"
+done
+
+# Loop through the list and create each branch
+for branch in "${branches[@]}"; do
+    git branch "$branch"
+    echo "Created branch: $branch"
+    
+    # Push the new branch to the remote
+    git push origin "$branch"
+    echo "Pushed branch: $branch to remote"
+done
+
+# Re-create the DemoStart tag locally and push it to the remote
+git tag DemoStart
+git push origin DemoStart
+echo "Re-created tag: DemoStart locally and pushed to remote"
