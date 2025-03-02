@@ -758,7 +758,6 @@ rules:
     "no-undef":
       severity: 2
       tags:
-        - Recommended
         - ErrorProne
         - Javascript
     "no-unexpected-multiline":
