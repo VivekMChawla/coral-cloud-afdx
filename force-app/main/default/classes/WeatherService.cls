@@ -1,5 +1,8 @@
 public class WeatherService {
-
+    /**
+     * Endpoint that retrieves the weather for a specific location
+     * @param location Location for which we want to retrieve the weather
+     */
     public static Weather getResortWeather(Datetime dateToCheck) {
         // If the provided date is in the past, use the current year.
         Integer currentYear = Date.today().year();
@@ -11,7 +14,7 @@ public class WeatherService {
         // Prepare API request
         HttpRequest req = new HttpRequest();
         req.setEndpoint(
-            'callout:WeatherEndpoint/weather?lat=37.789782764570425&lon=-122.39723702244089&date=' +
+            'callout:Weather_Endpoint/weather?lat=37.789782764570425&lon=-122.39723702244089&date=' +
             isoDate
         );
         req.setMethod('GET');

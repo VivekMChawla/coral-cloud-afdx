@@ -1,4 +1,4 @@
-public class ExperienceBookingHelper {
+public with sharing class ExperienceBookingHelper {
     public static void createExperienceSessions(String sessionId) {
         Session__c session = [
                 SELECT Id, Capacity__c, Booked_Slots__c, Experience__c
@@ -28,12 +28,13 @@ public class ExperienceBookingHelper {
             SELECT Id
             FROM Contact
             WHERE
-                Id NOT IN (
-                    SELECT Contact__c
-                    FROM Booking__c
-                    WHERE Session__r.Experience__c = :session.Experience__c
-                )
-                AND Lifetime_Experience_Bookings__c <= 12
+            Id NOT IN (
+                SELECT Contact__c
+                FROM Booking__c
+                WHERE Session__r.Experience__c = :session.Experience__c
+            )
+            AND Lifetime_Experience_Bookings__c <= 12
+            WITH USER_MODE
         ];
 
         List<Booking__c> newBookings = new List<Booking__c>();
@@ -60,7 +61,7 @@ public class ExperienceBookingHelper {
 
         if (!newBookings.isEmpty()) {
             try {
-                insert newBookings;
+                insert as user newBookings;
                 System.debug(
                     'Successfully created bookings for ' +
                         newBookings.size() +
