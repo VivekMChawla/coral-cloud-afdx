@@ -19,6 +19,10 @@ sf agent generate test-spec \
 --output-file specs/GE_Agent_Test_Rebecca-testSpec.yaml
 ```
 
+## Preview Agent Conversation
+```bash
+sf agent preview -a AgentPreview
+```
 
 # Other Useful Commands
 
