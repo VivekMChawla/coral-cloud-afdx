@@ -1,4 +1,4 @@
-# DevTools Demo
+# AFDX Pro-Code Breakout Demo
 
 This demo showcases the suite of Agentforce DX Pro-Code Developer Tools.
 
@@ -22,19 +22,12 @@ sf agent generate test-spec \
 
 # Other Useful Commands
 
-## Create an Agent Spec from an Agent Spec
-```bash
-sf agent generate agent-spec --spec ExistingAgentSpec
-```
-
 ## Fetch Agent Test Results
 ```bash
 sf agent test results --job-id xxxxxx --json
 ```
 
-# Demo Management Commands
-
-## Reset the Demo
+## Create an Agent Spec from an Agent Spec
 ```bash
-./demo/reset
+sf agent generate agent-spec --spec Resort_Manager-partialSpec.yaml
 ```
