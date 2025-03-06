@@ -46,6 +46,7 @@ $RECYCLE.BIN/
 
 # Ignore TEMP directory
 **/TEMP/
+**/temp/
 
 # Ignore Code Analyzer's default report name.
 code-analysis.html
