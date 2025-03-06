@@ -2,10 +2,16 @@
 
 This demo showcases the suite of Agentforce DX Pro-Code Developer Tools.
 
-## Run Agent Tests
+## Recreate the Agent Test
+```bash
+sf agent test create --test-api-name Guest_Experience_Agent_Test
+```
+
+## Run the Agent Test
 ```bash
 sf agent test run --api-name Guest_Experience_Agent_Test --wait 5
 ```
+
 ## Run Code Analyzer 5.0 Scan (Recommended Rules | HTML Output)
 ```bash
 sf code-analyzer run --output-file=code-analysis.html
