@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AiEvaluationDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>AI generated Guest Experience Agent tests made by Rebecca</description>
+    <name>AI Generated Agent Tests</name>
+    <subjectName>Guest_Experience_Agent</subjectName>
+    <subjectType>AGENT</subjectType>
+    <subjectVersion>v1</subjectVersion>
+    <testCase>
+        <expectation>
+            <expectedValue>Experience_Management</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>[]</expectedValue>
+            <name>action_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>The agent should politely ask for the guest&apos;s email address and membership number.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>Are there any family-friendly experiences at the resort today?</utterance>
+        </inputs>
+        <number>1</number>
+    </testCase>
+    <testCase>
+        <expectation>
+            <expectedValue>Experience_Management</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>[&quot;Get_Customer_Details&quot;,&quot;Get_Experience_Details&quot;,&quot;Get_Sessions&quot;,&quot;Generate_Peronalized_Schedule&quot;,&quot;Create_Experiences_Session_Booking&quot;]</expectedValue>
+            <name>action_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>The agent should find the guest&apos;s contact and greet them by name before providing a personalized schedule.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>Can you build me a personalized schedule? My email is sofiarodriguez@example.com and my membership number is 10008155.</utterance>
+        </inputs>
+        <number>2</number>
+    </testCase>
+    <testCase>
+        <expectation>
+            <expectedValue>Experience_Management</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>[]</expectedValue>
+            <name>action_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>The agent SHOULD NOT provide information about nightly entertainment options in the area.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>Tell me about the nightly entertainment options in the area.</utterance>
+        </inputs>
+        <number>3</number>
+    </testCase>
+    <testCase>
+        <expectation>
+            <expectedValue>Local_History</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>[&quot;AnswerQuestionsWithKnowledge&quot;]</expectedValue>
+            <name>action_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>The agent should share information about flamingoes and include small details about their history at Coral Cloud resort.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>What&apos;s with all the flamingoes at the resort?</utterance>
+        </inputs>
+        <number>4</number>
+    </testCase>
+    <testCase>
+        <expectation>
+            <expectedValue>Local_Weather</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>[&quot;Check_Weather&quot;]</expectedValue>
+            <name>action_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>The agent should provide a forecast including a temperature range and weather conditions.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>What will the weather be like today?</utterance>
+        </inputs>
+        <number>5</number>
+    </testCase>
+    <testCase>
+        <expectation>
+            <expectedValue>Experience_Management</expectedValue>
+            <name>topic_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>[]</expectedValue>
+            <name>action_sequence_match</name>
+        </expectation>
+        <expectation>
+            <expectedValue>The agent should politely ask for the guest&apos;s email address and membership number.</expectedValue>
+            <name>bot_response_rating</name>
+        </expectation>
+        <inputs>
+            <utterance>Can you sign me up for the beach boot camp experience tomorrow?</utterance>
+        </inputs>
+        <number>6</number>
+    </testCase>
+</AiEvaluationDefinition>

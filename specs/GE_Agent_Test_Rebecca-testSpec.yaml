@@ -1,0 +1,37 @@
+name: AI Generated Agent Tests
+description: AI generated Guest Experience Agent tests made by Rebecca
+subjectType: AGENT
+subjectName: Guest_Experience_Agent
+subjectVersion: v1
+testCases:
+  - utterance: Are there any family-friendly experiences at the resort today?
+    expectedTopic: Experience_Management
+    expectedActions: []
+    expectedOutcome: The agent should politely ask for the guest's email address and membership number.
+  - utterance: Can you build me a personalized schedule? My email is sofiarodriguez@example.com and my membership number is 10008155.
+    expectedTopic: Experience_Management
+    expectedActions:
+      - Get_Customer_Details
+      - Get_Experience_Details
+      - Get_Sessions
+      - Generate_Peronalized_Schedule
+      - Create_Experiences_Session_Booking
+    expectedOutcome: The agent should find the guest's contact and greet them by name before providing a personalized schedule.
+  - utterance: Tell me about the nightly entertainment options in the area.
+    expectedTopic: Experience_Management
+    expectedActions: []
+    expectedOutcome: The agent SHOULD NOT provide information about nightly entertainment options in the area.
+  - utterance: What's with all the flamingoes at the resort?
+    expectedTopic: Local_History
+    expectedActions:
+      - AnswerQuestionsWithKnowledge
+    expectedOutcome: The agent should share information about flamingoes and include small details about their history at Coral Cloud resort.
+  - utterance: What will the weather be like today?
+    expectedTopic: Local_Weather
+    expectedActions:
+      - Check_Weather
+    expectedOutcome: The agent should provide a forecast including a temperature range and weather conditions.
+  - utterance: Can you sign me up for the beach boot camp experience tomorrow?
+    expectedTopic: Experience_Management
+    expectedActions: []
+    expectedOutcome: The agent should politely ask for the guest's email address and membership number.
