@@ -49,3 +49,6 @@ $RECYCLE.BIN/
 
 # Ignore Code Analyzer's default report name.
 code-analysis.html
+
+# Ignore a local copy of the demo reset script
+**/reset-local
