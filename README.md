@@ -22,6 +22,11 @@ sf code-analyzer run --output-file=code-analysis.html
 sf code-analyzer run --rule-selector Recommended:2 --view=detail
 ```
 
+## Preview a Conversation with an Agent
+```bash
+sf agent preview --connected-app-user AgentPreview
+```
+
 # Other Useful Commands
 
 ## Create an Agent Spec from an Agent Spec
