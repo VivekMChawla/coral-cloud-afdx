@@ -29,7 +29,7 @@
             <name>topic_sequence_match</name>
         </expectation>
         <expectation>
-            <expectedValue>[&quot;Check_Weather&quot;]</expectedValue>
+            <expectedValue>[&apos;Check_Weather&apos;]</expectedValue>
             <name>action_sequence_match</name>
         </expectation>
         <expectation>
