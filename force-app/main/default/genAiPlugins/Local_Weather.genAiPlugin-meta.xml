@@ -19,7 +19,7 @@
         <masterLabel>instruction_ifacustome0</masterLabel>
     </genAiPluginInstructions>
     <genAiPluginInstructions>
-        <description>If the customer DOES NOT provide a specific date OR asks about today&apos;s weather, use 2025-03-09 as the date when running the &apos;Check Weather&apos; action.  If the customer DOES provide a specific date, ensure it IS NOT TODAY or in the past.</description>
+        <description>If the customer DOES NOT provide a specific date OR asks about today&apos;s weather, use FOUR days AFTER TODAY as the date when running the &apos;Check Weather&apos; action.  If the customer DOES provide a specific date, ensure it IS NOT TODAY or in the past.</description>
         <developerName>instruction_ifthecusto1</developerName>
         <language xsi:nil="true"/>
         <masterLabel>instruction_ifthecusto1</masterLabel>
